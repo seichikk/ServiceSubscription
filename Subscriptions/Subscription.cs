@@ -1,3 +1,5 @@
+namespace SubscriptionService;
+
 public class Subscription
 {
     public SubscriptionType Type { get; private set; }

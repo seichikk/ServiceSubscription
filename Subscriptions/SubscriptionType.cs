@@ -1,3 +1,5 @@
+namespace SubscriptionService;
+
 public enum SubscriptionType
 {
     Free,
