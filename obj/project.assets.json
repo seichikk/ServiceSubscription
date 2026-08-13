@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aser\\OneDrive\\Рабочий стол\\hwtutor2\\hwtutor2.csproj",
+      "projectUniqueName": "C:\\Users\\Aser\\OneDrive\\Рабочий стол\\ServiceSubscription\\hwtutor2.csproj",
       "projectName": "hwtutor2",
-      "projectPath": "C:\\Users\\Aser\\OneDrive\\Рабочий стол\\hwtutor2\\hwtutor2.csproj",
+      "projectPath": "C:\\Users\\Aser\\OneDrive\\Рабочий стол\\ServiceSubscription\\hwtutor2.csproj",
       "packagesPath": "C:\\Users\\Aser\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aser\\OneDrive\\Рабочий стол\\hwtutor2\\obj\\",
+      "outputPath": "C:\\Users\\Aser\\OneDrive\\Рабочий стол\\ServiceSubscription\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aser\\AppData\\Roaming\\NuGet\\NuGet.Config"

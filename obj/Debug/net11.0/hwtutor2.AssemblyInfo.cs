@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("hwtutor2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f36ea85620ca1ccb3f3f2dcb8806692f5611320a")]
 [assembly: System.Reflection.AssemblyProductAttribute("hwtutor2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("hwtutor2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
