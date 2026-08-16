@@ -1,0 +1,11 @@
+# .NET
+bin/
+obj/Debug/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+.DS_Store
