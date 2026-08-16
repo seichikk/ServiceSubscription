@@ -28,4 +28,9 @@ public class UserStorage
 
         return subscribedUsers;
     }
+
+    public User? GetUserById(int id)
+    {
+        return _users.FirstOrDefault(u => u.Id == id);
+    }
 }
