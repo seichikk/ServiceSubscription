@@ -16,7 +16,7 @@ public class UserStorageTests
     public void RegisterTest()
     {
         int initialCount = userStorage.GetUsersCount();
-        userStorage.Register(new User("иван", new Subscription(SubscriptionType.Standard)));
+        userStorage.Register(new User("иван", new Subscription(SubscriptionType.Standard), 1));
         int newCount = userStorage.GetUsersCount();
         Assert.AreEqual(initialCount + 1, newCount);
     }
@@ -24,9 +24,9 @@ public class UserStorageTests
     [Test]
     public void GetActiveSubscribersNamesTest()
     {
-        userStorage.Register(new User("иван", new Subscription(SubscriptionType.Standard)));
-        userStorage.Register(new User("петр", new Subscription(SubscriptionType.Free)));
-        userStorage.Register(new User("мария", new Subscription(SubscriptionType.Premium)));
+        userStorage.Register(new User("иван", new Subscription(SubscriptionType.Standard), 1));
+        userStorage.Register(new User("петр", new Subscription(SubscriptionType.Free), 2));
+        userStorage.Register(new User("мария", new Subscription(SubscriptionType.Premium), 3));
 
         List<string> activeSubscribers = userStorage.GetActiveSubscribersNames();
 
@@ -38,9 +38,9 @@ public class UserStorageTests
     [Test]
     public void GetUsersCountTest()
     {
-        userStorage.Register(new User("иван", new Subscription(SubscriptionType.Standard)));
-        userStorage.Register(new User("петр", new Subscription(SubscriptionType.Free)));
-        userStorage.Register(new User("мария", new Subscription(SubscriptionType.Premium)));
+        userStorage.Register(new User("иван", new Subscription(SubscriptionType.Standard), 1));
+        userStorage.Register(new User("петр", new Subscription(SubscriptionType.Free), 2));
+        userStorage.Register(new User("мария", new Subscription(SubscriptionType.Premium), 3));
 
         int count = userStorage.GetUsersCount();
 
