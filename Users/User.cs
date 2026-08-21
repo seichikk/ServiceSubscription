@@ -6,7 +6,7 @@ public class User
     public Subscription UserSubscription { get; private set; }
     public int Id { get; private set; }
 
-    public User(string name, Subscription subscription, int id = 0)
+    public User(string name, Subscription subscription, int id)
     {
         Name = name;
         UserSubscription = subscription;
