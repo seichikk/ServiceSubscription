@@ -22,17 +22,17 @@ public class UserStorageTests
     }
 
     [Test]
-    public void GetActiveSubscribersNamesTest()
+    public void GetPaidSubscribersNamesTest()
     {
         userStorage.Register(new User("иван", new Subscription(SubscriptionType.Standard), 1));
         userStorage.Register(new User("петр", new Subscription(SubscriptionType.Free), 2));
         userStorage.Register(new User("мария", new Subscription(SubscriptionType.Premium), 3));
 
-        List<string> activeSubscribers = userStorage.GetActiveSubscribersNames();
+        List<string> paidSubscribers = userStorage.GetPaidSubscribersNames();
 
-        Assert.Contains("иван", activeSubscribers);
-        Assert.Contains("мария", activeSubscribers);
-        Assert.IsFalse(activeSubscribers.Contains("петр"));
+        Assert.Contains("иван", paidSubscribers);
+        Assert.Contains("мария", paidSubscribers);
+        Assert.IsFalse(paidSubscribers.Contains("петр"));
     }
 
     [Test]

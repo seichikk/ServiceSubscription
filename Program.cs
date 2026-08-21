@@ -37,6 +37,6 @@ public class Program
         }
 
         Console.WriteLine($"всего юзеров: {userStorage.GetUsersCount()}");
-        Console.WriteLine("активные подписчики: " + string.Join(", ", userStorage.GetActiveSubscribersNames()));
+        Console.WriteLine("оплаченные подписчики: " + string.Join(", ", userStorage.GetPaidSubscribersNames()));
     }
 }

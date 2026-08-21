@@ -14,7 +14,7 @@ public class UserStorage
         return _users.Count;
     }
 
-    public List<string> GetActiveSubscribersNames()
+    public List<string> GetPaidSubscribersNames()
     {
         List<string> subscribedUsers = new List<string>();
 
