@@ -1,3 +1,6 @@
+using System;
+using SubscriptionService;
+
 namespace SubscriptionService;
 
 public class Program
@@ -5,18 +8,33 @@ public class Program
     public static void Main(string[] args)
     {
         UserStorage userStorage = new UserStorage();
+        int currentId = 1;
 
-        Subscription freeSubscription = new Subscription(SubscriptionType.Free);
-        Subscription standardSubscription = new Subscription(SubscriptionType.Standard);
-        Subscription premiumSubscription = new Subscription(SubscriptionType.Premium);
+        while (true)
+        {
+            Console.WriteLine("введите имя или 'выход':");
+            string name = Console.ReadLine() ?? string.Empty;
+            
+            if (name?.ToLower() == "выход")
+            {
+                break;
+            }
 
-        User user1 = new User("иван", freeSubscription, 1);
-        User user2 = new User("олег", standardSubscription, 2);
-        User user3 = new User("дима", premiumSubscription, 3);
-
-        userStorage.Register(user1);
-        userStorage.Register(user2);
-        userStorage.Register(user3);
+            Console.WriteLine("тип подписки 0 - Free, 1 - Standard, 2 - Premium:");
+            string typeInput = Console.ReadLine() ?? string.Empty;
+            
+            if (Enum.TryParse(typeInput, out SubscriptionType type))
+            {
+                Subscription subscription = new Subscription(type);
+                User user = new User(name ?? string.Empty, subscription, currentId++);
+                userStorage.Register(user);
+                Console.WriteLine("пользователь добавлен");
+            }
+            else
+            {
+                Console.WriteLine("неверный ввод");
+            }
+        }
 
         Console.WriteLine($"всего юзеров: {userStorage.GetUsersCount()}");
         Console.WriteLine("активные подписчики: " + string.Join(", ", userStorage.GetActiveSubscribersNames()));
